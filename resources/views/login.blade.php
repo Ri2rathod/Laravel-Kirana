@@ -11,13 +11,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-12 col-sm-12 mx-auto  py-4 px-5 my-4 login_div shadow ">
-                <form class="login_form">
+                <form class="login_form" method="POST" action="/userlogin">
+                    @csrf
                     <h3 class="display-5 text-center">Login</h3>
                     <hr class="w-50 mx-auto my-4">
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Email address</label>
                         <div class="d-flex form_input_div">
-                            <i class="fas fa-envelope my-auto"></i><input type="email" class="form-control" id="exampleInputEmail1" placeholder="Type Your Email Adress" aria-describedby="emailHelp">
+                            <i class="fas fa-envelope my-auto"></i><input type="email" name="UserEmail" class="form-control" id="exampleInputEmail1" placeholder="Type Your Email Adress" aria-describedby="emailHelp">
                         </div>
                         
                     </div>
@@ -25,7 +26,7 @@
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Password</label>
                         <div class="d-flex form_input_div">
-                        <i class="fas fa-lock my-auto"></i><input type="password" class="form-control" placeholder="Type Your Password" id="exampleInputPassword1">
+                        <i class="fas fa-lock my-auto"></i><input type="password" name="UserPassword" class="form-control" placeholder="Type Your Password" id="exampleInputPassword1">
                         </div>
                     </div>
                     <div class="mb-3 form-check">

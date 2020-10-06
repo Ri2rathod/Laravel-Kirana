@@ -18,7 +18,7 @@
                     </div>
                     <div class="button">
                         <hr class="w-25 my-3 mx-auto">
-                        <a name="" id="" class="btn btn-secondary button_link" href="product.html" role="button">Buy</a>
+                        <a name="" id="" class="btn btn-secondary button_link" href="/product" role="button">Buy</a>
                     </div>
                 </div>
             </div>

@@ -26,11 +26,11 @@
                     </form>
                     <ul class="navbar-nav mb-2 mb-md-0 ml-md-auto nav_item">
                         <li class="nav-item mr-md-3">
-                            <a class="nav-link active" href="/login"><i class="fas fa-sign-in-alt mr-1"></i>Login</a>
+                            <a class="nav-link active" href="/login"><i class="fas fa-user-plus mr-1"></i>Login</a>
                         </li>
-                        <li class="nav-item mr-md-5">
+                        {{-- <li class="nav-item mr-md-5">
                             <a class="nav-link" href="#"><i class="fas fa-user-plus mr-1"></i>SignUp</a>
-                        </li>
+                        </li> --}}
                     </ul>
                             <!-- <img src="assets/images/41Jp8x8jhLL.jpg" class="img-responsive  image_profile  ml-md-auto" onclick="" alt=""> -->
                     
@@ -86,7 +86,7 @@
 
     @yield('content')
 
-    
+
     <footer class="text-light container-fluid w-100 mt-4  pt-5 .">
         <!-- <h3 class="text-capitalize text-center display-6">Copy Right</h3> -->
         <!-- <hr class="w-50 mx-auto"/> -->
