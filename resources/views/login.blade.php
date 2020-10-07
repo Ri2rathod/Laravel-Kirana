@@ -8,7 +8,7 @@
    
 
 @section('content')
-    <div class="container">
+    {{-- <div class="container">
         <div class="row">
             <div class="col-md-4 col-12 col-sm-12 mx-auto  py-4 px-5 my-4 login_div shadow ">
                 <form class="login_form" method="POST" action="/userlogin">
@@ -50,5 +50,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 @endsection
