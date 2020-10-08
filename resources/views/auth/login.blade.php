@@ -87,31 +87,38 @@
                 <hr class="w-50 mx-auto my-4">
                 <div class="mb-3">
                     <label for="email" class="form-label">Email address</label>
-                    <div class="d-flex form_input_div">
-                        <i class="fas fa-envelope my-auto"></i><input type="email" name="email " class="form-control  @error('email') is-invalid @enderror" id="email" placeholder="Type Your Email Adress" aria-describedby="emailHelp">
-                    </div>
-                    @error('email')
-                    <div class="invalid-feedback">
+                   
+                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Type Your Email Address">
+                        @error('email')
+                        <div class="invalid-feedback" role="alert">
+                            
+                            <strong>{{ $message }}</strong>
+                        </div>
+                        @enderror
                         
-                        <strong>{{ $message }}</strong>
-                      </div>
-                      @enderror
-                      
+                        {{-- <i class="fas fa-envelope my-auto"></i><input type="email" name="email " class="form-control  @error('email') is-invalid @enderror" id="email" placeholder="Type Your Email Adress" aria-describedby="emailHelp"> --}}
                     
                 </div>
                 
                 <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
-                    <div class="d-flex form_input_div">
-                    <i class="fas fa-lock my-auto"></i><input type="password" name="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Type Your Password" id="password" >
-                    </div>
+                    
+                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password"  placeholder="Type Your Password">
+
+                                @error('password')
+                                    <div class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </div>
+                                @enderror
+                        {{-- <i class="fas fa-lock my-auto"></i><input type="password" name="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Type Your Password" id="password" > --}}
+                   
                 </div>
                 <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="remember" name="remember"  {{ old('remember') ? 'checked' : '' }}>
+                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                     <label class="form-check-label" for="remember">Remember Me</label>
                 </div>
                 <div class="mb-3">
-                    <button type="submit" class="btn btn btn-block">  {{ __('Login') }}</button>
+                    <button type="submit" class="btn btn-block">  {{ __('Login') }}</button>
                 </div>
             </form>
             
@@ -120,7 +127,7 @@
                     <hr class="w-25 ml-auto mr-1"><P class="">or singup using</P><hr class="w-25 mr-auto ml-1">
                 </div>
                 <div class="API d-flex justify-content-center">
-                    <a href="http://" class="btn btn-danger m-2 p-3 btn_google"><i class="fab fa-google fa-2x"></i></a>
+                    <a href="{{ url('auth/google') }}" class="btn btn-danger m-2 p-3 btn_google"><i class="fab fa-google fa-2x"></i></a>
                     <a href="http://" class="btn btn-primary m-2 p-3 btn-facebook"><i class="fab fa-facebook fa-2x"></i></a>
                     <a href="http://" class="btn btn-success m-2 p-3 btn-twitter"><i class="fab fa-twitter fa-2x"></i></a>
                 </div>

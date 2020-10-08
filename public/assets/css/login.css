@@ -7,11 +7,13 @@
 
     border-bottom: 1px solid  black !important;
 }
-.login_div>form>div>div>input[type="email"],.login_div>form>div>div>input[type="password"]{
+.login_div>form>div>input[type="email"],.login_div>form>div>input[type="password"]{
     border: none;
     /* border: solid  1px black !important; */
+    padding-left: 0%;
+    border-bottom: solid 1px black;
     border-radius: 0px !important;
-    background: transparent;
+    /* background: transparent; */
     color: black;
     transition: 0.5s;
     outline: none;

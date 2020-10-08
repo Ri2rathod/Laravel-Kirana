@@ -24,4 +24,10 @@ Route::post('userlogin', [userController::class,'user_login'] );
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+  
+Route::get('/home', [App\Http\Controllers\HomeController::class,'index'])->name('home');
+Route::get('auth/google', [App\Http\Controllers\Auth\GoogleController::class,'redirectToGoogle']);
+Route::get('auth/google/callback',[ App\Http\Controllers\Auth\GoogleController::class,'handleGoogleCallback']);
