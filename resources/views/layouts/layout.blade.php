@@ -14,7 +14,7 @@
     </head>
 <body>
 
-    <nav class="navbar navbar-expand-md rounded-0 navbar-light ">
+    <nav class="navbar navbar-expand-md rounded-0  navbar-light ">
         <div class="container-fluid">
             <div class="brand">
                 <a class="navbar-brand brand_logo" href="/"><img src="assets/images/icons8-k-64.png" alt="" class="d-inline-block align-top " width="50 my-auto" height="40">MAXX Kirana</a>
@@ -46,17 +46,17 @@
                                 {{ Auth::user()->name }}
                             </a>
 
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
+                            <ul class="dropdown-menu dropdown-menu-right  " aria-labelledby="navbarDropdown">
+                                </li>
+                                    <a class="dropdown-item text-primary" style="color: black !important" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+                                <li>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
                                 </form>
-                            </div>
+                            </ul>
                         </li>
                     @endguest
                     </ul>
@@ -69,7 +69,7 @@
 
     </nav>
 
-    <nav class="navbar cat_nav navbar-expand-md sticky-top navbar-light shadow">
+    <nav class="navbar cat_nav navbar-expand-md  navbar-light shadow">
         <div class="container-fluid">
             <div class="brand">
                 <!-- <a class="navbar-brand brand_logo" href="#"><img src="assets/images/logo.png" alt="" class="d-inline-block align-top " width="50 my-auto" height="40">Shopify</a> -->
